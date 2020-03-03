@@ -6,8 +6,8 @@ echo color("red","| Claim Voucher Gojek|\n");
 echo color("red","| Auto create Gojek X Redeem voucher |\n");
 echo color("red","| github: astro1490 |\n");
 echo color("red","| fanspage :TEAM HOAX|\n");
-echo color("red","| Creator : kumpulanremaja.com          |\n");
-echo "| Version : Premium X pertalite      |\n";
+echo color("red","| Creator : Team Hoax          |\n");
+echo "| Version : Pertamax      |\n";
 echo "| Time    :".date('[d-m-Y] [H:i:s]')."   |\n";
 echo " ===========================\n";
 
