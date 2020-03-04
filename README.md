@@ -20,7 +20,7 @@ git clone https://github.com/astro1490/gofood
 lalu masukan kode perintah untuk menjalankan script , kode ini untuk daftar dan claim voucher go food gojek
 cd gofood
 
-php full.php
+php Full.php
 
 
 
