@@ -176,7 +176,7 @@ function change(){
          echo color("nevy","==============Register==============\n");;
          goto otp;
          }
-         } else {
+         }else{
          echo color("red","Nomor Sudah Terdaftar/Salah !!!\n");
          echo color("nevy","==============Register==============\n");
          goto ulang;
