@@ -86,10 +86,7 @@ function change(){
         echo color("yellow",".");
         sleep(1);
         }
-        sleep(3);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOPAYDIXXI5"}');
-        $message2 = fetch_value($goride1,'"message":"','"');
-        echo "\n".color("green","+] Message: ".$message1);
+        
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=21&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
