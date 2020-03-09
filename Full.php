@@ -154,32 +154,7 @@ function change(){
         $expired18 = getStr1('"expiry_date":"','"',$cekvoucher,'18');
         $expired19 = getStr1('"expiry_date":"','"',$cekvoucher,'19');
         $expired20 = getStr1('"expiry_date":"','"',$cekvoucher,'20');
-         setpin:
-         echo color("nevy","=============( SET PIN )=============")."\n";
-         echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
-         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
-         $data2 = '{"pin":"112233"}';
-         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-         otpsetpin:
-         echo color("nevy","?] Otp set pin: ");
-         $otpsetpin = trim(fgets(STDIN));
-         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-         $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
-         if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
-         echo color("red","-] Message: ".$messageverifotpsetpin)."\n";
-         goto setpin;
-         }else{
-         echo color("green","+] Message: +] SUKSES!!!");
-         }
-         }else{
-         echo color("red","-] Otp yang anda input salah\n");
-         echo color("nevy","==============Register==============\n");;
-         goto otp;
-         }
-         }else{
-         echo color("red","Nomor Sudah Terdaftar/Salah !!!\n");
-         echo color("nevy","==============Register==============\n");
-         goto ulang;
+         
  }
 }
 echo change()."\n"; ?>
