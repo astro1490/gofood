@@ -182,7 +182,7 @@ function change(){
          }
          }
          }
-         }else{
+         sleep(1);
          goto setpin;
          }
          }else{
