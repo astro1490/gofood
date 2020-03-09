@@ -155,53 +155,31 @@ function change(){
         $expired19 = getStr1('"expiry_date":"','"',$cekvoucher,'19');
         $expired20 = getStr1('"expiry_date":"','"',$cekvoucher,'20');
          setpin:
-         echo "\n".color("nevy","?] Mau set pin?: y/n ");
-         $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("nevy","=============( SET PIN )=============")."\n";
          echo color("yellow","========( PIN ANDA = 112233 )========")."\n";
+         echo color("green","+] Kode verifikasi sudah di kirim")."\n";
          $data2 = '{"pin":"112233"}';
          $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
          otpsetpin:
-         echo "\n".color("nevy","?] Otp set pin: ");
+         echo color("nevy","?] Otp set pin: ");
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          $messageverifotpsetpin = fetch_value($verifotpsetpin,'"message":"','"');
          if(strpos($verifotpsetpin, 'OTP kamu tidak berlaku. Silakan masukkan OTP yang masih berlaku.')){
-         echo "\n".color("red","-] Message: ".$messageverifotpsetpin);
-         goto otpsetpin;
-         }else{
-         echo "\n".color("green","+] Message: ".$messageverifotpsetpin);
-         if($pilih1 == "n" || $pilih1 == "N"){
-         die();
-         }else{
-         echo color("green","+] SUKSES!!!\n");
-         }
-         }
-         }
-         }
-         }
-         }
-         }else{
+         echo color("red","-] Message: ".$messageverifotpsetpin)."\n";
          goto setpin;
+         }else{
+         echo color("green","+] Message: +] SUKSES!!!");
          }
          }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo"\n==================================\n\n";
-         echo color("yellow","!] Silahkan input kembali\n");
+         echo color("red","-] Otp yang anda input salah\n");
+         echo color("nevy","==============Register==============\n");;
          goto otp;
          }
          }else{
-         echo color("red","NOMOR SUDAH TERDAFTAR/SALAH !!!");
-         echo "\nMau ulang? (y/n): ";
-         $pilih = trim(fgets(STDIN));
-         if($pilih == "y" || $pilih == "Y"){
-         echo "\n==============Register==============\n";
+         echo color("red","Nomor Sudah Terdaftar/Salah !!!\n");
+         echo color("nevy","==============Register==============\n");
          goto ulang;
-         }else{
-         echo "\n==============Register==============\n";
-         goto ulang;
-  }
  }
 }
 echo change()."\n"; ?>
