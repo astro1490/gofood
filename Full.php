@@ -176,7 +176,6 @@ function change(){
          echo color("nevy","==============Register==============\n");;
          goto otp;
          }
-
  }
 }
 echo change()."\n"; ?>
