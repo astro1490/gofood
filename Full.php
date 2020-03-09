@@ -176,6 +176,10 @@ function change(){
          echo color("nevy","==============Register==============\n");;
          goto otp;
          }
+         }else{
+         echo color("red","Nomor Sudah Terdaftar/Salah !!!\n");
+         echo color("nevy","==============Register==============\n");
+         goto ulang;
  }
 }
 echo change()."\n"; ?>
