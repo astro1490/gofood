@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","[]      SALAMHOAXTEAM      []\n");
+echo color("green","[]      SALAM HOAXTEAM      []\n");
 echo color("yellow","[]          BY : TEAM HOAX             []\n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   []\n");
 function change(){
